@@ -1,0 +1,20 @@
+{
+  "name": "mvc-tech-blog",
+  "version": "1.0.0",
+  "description": "CMS style blog site",
+  "main": "server.js",
+  "scripts": {
+    "test": "N/A",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FenixS83/MVC-Tech-Blog.git"
+  },
+  "author": "Fenix Sampson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FenixS83/MVC-Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/FenixS83/MVC-Tech-Blog#readme"
+}
