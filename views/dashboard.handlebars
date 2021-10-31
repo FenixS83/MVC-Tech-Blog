@@ -1,0 +1,36 @@
+<div class="w-75 d-column mb-3">
+  <h1 class="text-center new-post">Your Posts</h1>
+  {{#each posts as |post|}}
+  <div class="user-post p-1 m-1">
+    <h3><a href="post/{{post.id}}">{{post.title}}</a></h3>
+    <p>Created: {{format_date post.dateCreated}}</p>
+  </div>
+  {{/each}}
+</div>
+
+<div class="w-75 d-column mb-3">
+  <h1 class="text-center new-post">Create a new Post</h1>
+  <form>
+    <div class="mb-3">
+      <label for="post-title" class="form-label">Title</label>
+      <input type="input" class="form-control" id="post-title" aria-describedby="emailHelp">
+
+    </div>
+    <div class="mb-3">
+      <label for="post-content" class="form-label">Content</label>
+      <input type="text" class="form-control" id="post-content">
+    </div>
+    <button type="submit" class="btn btn-primary" id="create">Create Post</button>
+  </form>
+
+  <div class="toast toast-add mx-auto" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      Congratulations!
+    </div>
+    <div class="toast-body">
+      Post Added!
+    </div>
+  </div>
+</div>
+
+<script src="./js/post.js"></script>
