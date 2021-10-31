@@ -81,3 +81,20 @@ router.get("/dashboard", async (req, res) => {
     }
 });
 
+//get route for viewing post
+router.get("/post:id", async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id);
+
+        const post = postData.get({ plain: true });
+
+        res.render("editPost", {
+            post, 
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+module.exports = router;
