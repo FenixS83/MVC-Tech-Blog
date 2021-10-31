@@ -17,3 +17,29 @@ router.post("/", async (req, res) => {
         res.status(500).json(err);
     }
 });
+// route for updating post
+router.put("/:id", async (req, res) => {
+    try {
+        const { title, content } = req.body;
+
+        if (!title || !content) {
+            res.status(400).send("Need to fill out form");
+        }
+        else {
+            const newPost = await Post.update(
+                {
+                    title,
+                    content,
+                },
+                {
+                    where: {
+                        id: req.params.id
+                    },
+                },
+            );
+            res.status(200).jsojn(newPost);
+        }
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
