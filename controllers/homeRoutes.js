@@ -61,3 +61,23 @@ router.get("/login", async (req, res) => {
 
     }
 });
+// get route for rendering dashboard page
+router.get("/dashboard", async (req, res) => {
+    try {
+        const userPosts = await Post.findAll({
+            where: {
+                userId: req.session.userId
+            }
+        });
+
+        const posts = userPosts.map((post) => post.get({ plain: true}));
+
+        res.render("dashboard", {
+            posts, 
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
