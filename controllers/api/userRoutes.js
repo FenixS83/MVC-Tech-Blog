@@ -23,3 +23,21 @@ router.post("/login", async (req, res) => {
         res.status(500).json(err);
     }
 });
+//route for creating a user
+router.post("/", async (req, res) => {
+    try {
+        const { email, userName, password } = req.body;
+
+        if ( !email || !userName || !password ) res.status(400).send("Need username, email and password");
+
+        const userData = await User.create({ email, userName, password });
+
+        req.session.save(() => {
+            req.session.userId = userData.id;
+            req.session.loggedIn = true;
+            res.status(200).json(userData);
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
