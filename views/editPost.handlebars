@@ -1,0 +1,46 @@
+<div class="w-75 d-column mb-3">
+  <h1 class="text-center new-post">Edit or Delete your Post:</h1>
+  <div class="main-post m-2">
+    <header class="d-flex justify-content-between align-items-start post-header">
+      <h3 class="p-2 h3-post">
+        {{post.title}}
+      </h3>
+      <p class="p-2">Created by {{post.user.userName}} on {{format_date post.dateCreated}}</p>
+    </header>
+    <p class="p-3">
+      {{post.content}}
+    </p>
+  </div>
+  <form>
+    <div class="mb-3">
+      <label for="post-title" class="form-label">Title</label>
+      <input type="input" class="form-control" id="post-title" aria-describedby="emailHelp">
+
+    </div>
+    <div class="mb-3">
+      <label for="post-content" class="form-label">Content</label>
+      <input type="text" class="form-control" id="post-content">
+    </div>
+    <button type="submit" class="btn btn-primary" id="update">Edit Post</button>
+    <button type="submit" class="btn btn-primary" id="delete">Delete Post</button>
+  </form>
+
+  <div class="toast toast-update mx-auto" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      Congratulations!
+    </div>
+    <div class="toast-body">
+      Post Updated!
+    </div>
+  </div>
+
+  <div class="toast toast-delete mx-auto" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      Congratulations!
+    </div>
+    <div class="toast-body">
+      Post Deleted!
+    </div>
+  </div>
+</div>
+<script src="../js/post.js"></script>
