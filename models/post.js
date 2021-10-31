@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-
 // sequelize Post model
 class Post extends Model {}
 
@@ -19,7 +18,7 @@ Post.init(
             type: DataTypes.TEXT,
         },
         dateCreated: {
-            type: DataTypes.dateCreated,
+            type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW
         },
@@ -37,4 +36,4 @@ Post.init(
     }
 );
 
-model.exports = Post;
+module.exports = Post;
