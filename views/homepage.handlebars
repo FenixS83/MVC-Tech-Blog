@@ -1,0 +1,13 @@
+{{#each posts as |post| }}
+<div class="main-post m-2 user-post">
+    <header class="d-flex justify-content-between align-items-start post-header">
+        <h3>
+            <a class="p-3" href="/comment/{{post.id}}>{{post.title}}"></a>
+        </h3>
+        <p class="p-2">Created by: {{post.user.username}} on {{format_date post.dateCreated}}</p>
+    </header>
+    <p class="p-3">
+        {{post.content}}
+    </p>
+</div>
+{{/each}}
