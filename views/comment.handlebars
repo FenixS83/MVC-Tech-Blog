@@ -1,0 +1,23 @@
+<div class="main-post m-2 user-post">
+    <header class="d-flex justify-content-between align-items-start post-header">
+        <h3 class="p-2 h3-post">
+            {{post.title}}
+        </h3>
+        <p class="p-2">Created by {{post.user.userName}} on {{format_date post.dateCreated}}</p>
+    </header>
+    <p class="p-3">
+        {{post.content}}
+    </p>
+</div>
+<div class="commentRen m-2 p-2">
+    <h4 class="comment">Comments:</h4>
+
+</div>
+<form>
+    <div class="mb-3">
+        <label for="comment" class="form-label">Comment on this Post!</label>
+        <input type="text" class="form-control" id="comment">
+    </div>
+    <button type="submit" class="btn btn-primary commentBtn">Comment</button>
+</form>
+<script src="../js/comment.js"></script>
