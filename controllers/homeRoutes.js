@@ -70,30 +70,30 @@ router.get("/dashboard", async (req, res) => {
             }
         });
 
-        const posts = userPosts.map((post) => post.get({ plain: true}));
+        const posts = userPosts.map((post) => post.get({ plain: true }));
 
         res.render("dashboard", {
-            posts, 
+            posts,
             loggedIn: true
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
-//get route for viewing post
-router.get("/post:id", async (req, res) => {
+// get route for viewing post
+router.get("/post/:id", async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
 
         const post = postData.get({ plain: true });
 
         res.render("editPost", {
-            post, 
+            post,
             loggedIn: true
         });
     } catch (err) {
         res.status(500).json(err);
+
     }
 });
 

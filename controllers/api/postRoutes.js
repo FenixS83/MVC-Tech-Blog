@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
         res.status(500).json(err);
     }
 });
-// route for updating post
+// route for updatng post
 router.put("/:id", async (req, res) => {
     try {
         const { title, content } = req.body;
@@ -37,13 +37,14 @@ router.put("/:id", async (req, res) => {
                     },
                 },
             );
-            res.status(200).jsojn(newPost);
+
+            res.status(200).json(newPost);
         }
     } catch (err) {
         res.status(500).json(err);
     }
 });
-//route for deleting post
+// route for deleting post
 router.delete("/:id", async (req, res) => {
     try {
         const deletedPost = await Post.destroy({
@@ -55,5 +56,6 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 
 module.exports = router;

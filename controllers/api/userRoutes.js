@@ -23,12 +23,12 @@ router.post("/login", async (req, res) => {
         res.status(500).json(err);
     }
 });
-//route for creating a user
+// route for creating a user
 router.post("/", async (req, res) => {
     try {
         const { email, userName, password } = req.body;
 
-        if ( !email || !userName || !password ) res.status(400).send("Need username, email and password");
+        if (!email || !userName || !password ) res.status(400).send("Need username, email and password");
 
         const userData = await User.create({ email, userName, password });
 
@@ -41,9 +41,9 @@ router.post("/", async (req, res) => {
         res.status(500).json(err);
     }
 });
-//route for logging out
+// route for logging out
 router.post("/logout", async (req, res) => {
-    console.log(res.session)
+    console.log(req.session)
     try {
         if(req.session.logged_in = true) {
             req.session.destroy(() => {
@@ -52,7 +52,9 @@ router.post("/logout", async (req, res) => {
         }
     } catch (err) {
         res.status(500).json(err);
+
     }
+
 })
 
 module.exports = router;

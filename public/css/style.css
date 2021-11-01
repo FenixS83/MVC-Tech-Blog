@@ -1,5 +1,7 @@
+
+
 h1.jumbo {
-    font-family: 'Faster One', cursive;
+    font-family: 'Wallpoet', cursive;
     font-size: 100px;
 }
 
@@ -7,18 +9,28 @@ h1.new-post {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Wallpoet', cursive;
+    font-size: 40px;
+    color: #5371ff;
+}
+
 header.top {
-    background-color: coral;
+    background-color:#5371ff;
 }
 
 header.post-header {
-    background-color: lightgray;
+    background-color: #ababab;
 }
 
 li.nav-item {
     border-radius: 5px;
     margin: 5px;
-    background-color: white;
+    background-color: #5ce0e6;
 }
 
 a#logout:hover {
@@ -32,7 +44,7 @@ div.main-post {
 }
 
 div.user-post {
-    background-color: lightcyan;
+    background-color: #858585;
     border: 1px solid black;
     border-radius: 5px;
 }
