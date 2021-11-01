@@ -6,9 +6,11 @@
 
   CMS-style blog site to create, view, edit and delete blog posts.
   
+  ## Link to webpage
+  
   Click the link below to visit my deployed page.
-
   <!-- [URL](undefined) -->
+  https://nameless-anchorage-15244.herokuapp.com/
 
   ## Table of Contents
   
@@ -41,7 +43,7 @@
 
   ## Motivation
 
-  
+ Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. 
 
   ## Usage
 
@@ -61,7 +63,20 @@
 
   ## Visualization
 
-  placeholder to add images or other media
+  Login Page
+  ![Login page](./images/login.png)
+
+  Create Post Page
+  ![Create Post](./images/createPost.png)
+
+  Home Page
+  ![Home page](./images/home.png)
+
+  Dashboard Page
+  ![Dashboard page](./images/dashboard.png)
+
+  Edit Post Page
+  ![Edit Post page](./images/editPost.png)
 
   ## Acknowledgements
 
