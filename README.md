@@ -10,7 +10,7 @@
   
   Click the link below to visit my deployed page.
   <!-- [URL](undefined) -->
-  https://nameless-anchorage-15244.herokuapp.com/
+ https://fenix-sampson-tech-blog.herokuapp.com/
 
   ## Table of Contents
   
